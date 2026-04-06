@@ -26,7 +26,6 @@ a {
 
 /* 이미지 기본 설정 */
 img {
-    display: block;
     max-width: 100%;
 }
 

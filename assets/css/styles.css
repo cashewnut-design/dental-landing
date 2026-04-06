@@ -1,8 +1,9 @@
 @import url(commons.css);
 
+
 header {
     margin: auto;
-    padding: auto;
+    padding: 0;
     display: flex;
     height: 100px;
 }
@@ -11,6 +12,11 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .navi {
@@ -27,6 +33,25 @@ nav {
     font-display: swap;
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    /* 로고 좌측, 메뉴 우측 끝 배치 */
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    /* 최대 너비 제한 */
+    margin: 0 auto;
+    /* 중앙 정렬 */
+    padding: 20px;
+    /* 양옆 여백 */
+    box-sizing: border-box;
+}
+
+.gnb {
+    justify-content: space-between;
+
+}
 
 .kv-section {
     position: relative;
@@ -39,18 +64,20 @@ nav {
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
+
 }
+
 .naming {
     margin-bottom: 20px;
 }
+
 /* 이미지 따로 컨트롤 */
 .kv-photo-wrap {
     position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-
-    width: 50%;
+    width: 60%;
 }
 
 .kv-photo-wrap img {
@@ -58,37 +85,133 @@ nav {
     display: block;
 }
 
-.motify-logo {
-    margin-bottom: 20px;
+.motify-teeth {
+    position: absolute;
+    left: 35%;
+    bottom: 16%;
+    width: 90px;
+    z-index: 10;
 }
 
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-    }
+.motify-logo img {
+    width: 275px;
+    /* 시안의 크기 적용 */
+    height: auto;
+    margin-bottom: 60px;
+}
 
-    .navi {
-        flex-direction: column;
-        align-items: center;
+
+
+.section02{
+    background-color: #0046B6;
+    display: flex;
+    align-items: center;
+   
+}
+
+.sec02-container {
+    color: #fff;
+    justify-content: space-between;
+    display: flex;
+    gap: 40px;
+    padding: 60px;
+    margin: 0 auto;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+}
+
+
+
+
+/* --- 모바일 반응형 (시안대로 적용) --- */
+@media (max-width: 768px) {
+    .kv-section {
+        padding: 60px 0 16px;
+        /* 상단 여백 조절 */
     }
 
     .kv-container {
         flex-direction: column;
+        /* 위(텍스트), 아래(이미지) 배치 */
+        align-items: flex-start;
+        
     }
 
     .kv-content {
+        padding: 0 16px;
         width: 100%;
+        /* 텍스트가 가득 차게 */
+        text-align: left;
+        margin-bottom: 40px;
+        /* 이미지와의 간격 */
     }
 
+    /* 이미지 영역: absolute를 static으로 풀어주는게 핵심 */
     .kv-photo-wrap {
         position: static;
         transform: none;
         width: 100%;
-        margin-top: 40px;
     }
 
-    .kv-photo-wrap img {
+    .kv-photo-wrap img.main-photo {
+        width: 100%;
+        display: block;
+        /* 시안처럼 한쪽만 둥글게 하려면 아래 속성 추가 */
+        border-radius: 100px 0 0 0;
+    }
+
+    /* 별(치아) 아이콘: 이미지 위에 둥둥 뜨게 재설정 */
+    .motify-teeth {
+        position: absolute;
+        /* 부모인 .kv-container 기준 */
+        right: 20px;
+        /* 우측 하단에서 20px 띄우기 */
+        bottom: 20px;
+        /* 하단에서 20px 띄우기 */
+        left: auto;
+        /* 기존 left 값 초기화 */
+        top: auto;
+        /* 기존 top 값 초기화 */
+        width: 60px;
+        /* 크기 조절 (시안에 맞춰 적당히) */
+        height: auto;
+        z-index: 10;
+        /* 사진(z-index:1)보다 높게 설정 */
+    }
+
+    .motify-teeth img {
         width: 100%;
     }
 
+     .gnb {
+            display: none;
+        }
+
+        .hamburger {
+            display: block;
+        }
+
+    nav {
+        padding: 15px 20px;
+
+    }
+
+    /* 시안처럼 '메뉴 글자' 대신 '햄버거 버튼'을 쓸 것이 아니라면 
+       글자 크기를 대폭 줄이거나 세로 정렬을 해야 합니다. */
+    .navi {
+        display: none;
+        gap: 15px;
+        /* 간격 축소 */
+    }
+
+    .navi a {
+        font-size: 14px;
+        /* 모바일용 글자 크기 */
+    }
+
+    .sec02-container{
+        font-size: 26px;
+        padding: 100px 16px;
+    }
 }
