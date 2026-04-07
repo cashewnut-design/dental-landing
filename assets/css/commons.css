@@ -127,26 +127,31 @@
     font-display: swap;
 }
 
+html {
+    font-size: 16px;
+}
 
 h1{ 
     font-family: 'Paperozi';
     font-display: swap;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 3rem;
     line-height: 72px;
 }
 
 h2{ font-family: 'Paperozi';
     font-display: swap;
     font-weight: 600;
-    font-size: 38px;
+    font-size: 2.375rem;
+    line-height: 57px;
+    
 }
 
 h3{
    font-family: 'Paperozi'; 
    font-display: swap;
    font-weight: 500;
-   font-size: 32px;
+   font-size: 2rem;
    line-height: 48px;
 }
 
@@ -154,6 +159,15 @@ h4{
     font-family: 'Paperozi';
     font-display: swap;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 36px;
 }
 
+p{
+    font-family: 'Pretendard';
+    font-display: swap;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 32px;
+
+}

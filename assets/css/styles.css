@@ -58,12 +58,15 @@ nav {
     background: #fff;
     padding: 120px 0;
 }
-
+.kv-section h4{
+    color: #808080;
+}
 .kv-container {
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
+    color: #202022;
 
 }
 
@@ -87,7 +90,7 @@ nav {
 
 .motify-teeth {
     position: absolute;
-    left: -11%;
+    left: -12%;
     bottom: 12%;
     width: 90px;
     z-index: 10;
@@ -120,8 +123,9 @@ nav {
     width: 100%;
     max-width: 1440px;
 }
-
-
+.sec02-img{
+    mix-blend-mode: luminosity;
+}
 .section03{
     background-image: url(../images/section-3-bg.png);
     background-size: cover;
@@ -138,6 +142,11 @@ nav {
     margin: 0 auto;
     width: 100%;
     max-width: 1440px;
+    
+}
+
+.sec03-container h1{
+    color: #0046B6;
 }
 
 .sec03-bar {
@@ -148,6 +157,12 @@ nav {
     display: flex;
     gap: 15px;
     align-items: center;
+    width: 100%;
+    max-width: 708px;
+}
+
+.bar-text{
+    color: #202022;
 }
 
 .bar-number{
@@ -200,20 +215,24 @@ nav {
     .motify-teeth {
         position: absolute;
        
-        right: 20px;
+        right: 40px;
        
-        bottom: 20px;
+        bottom: 40px;
         
         left: auto;
        
         top: auto;
         
-        width: 60px;
         
         height: auto;
         z-index: 10;
         
     }
+
+    .key-txt-2{
+        margin-top: 40px;
+    }
+
 
     .motify-teeth img {
         width: 100%;
@@ -248,4 +267,8 @@ nav {
         font-size: 26px;
         padding: 100px 16px;
     }
+
+
+
 }
+
