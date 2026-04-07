@@ -87,8 +87,8 @@ nav {
 
 .motify-teeth {
     position: absolute;
-    left: 35%;
-    bottom: 16%;
+    left: -11%;
+    bottom: 12%;
     width: 90px;
     z-index: 10;
 }
@@ -122,6 +122,41 @@ nav {
 }
 
 
+.section03{
+    background-image: url(../images/section-3-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: auto;
+}
+
+.sec03-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 20px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1440px;
+}
+
+.sec03-bar {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.bar-number{
+    padding: 9px 12px ;
+    background-color: #0046B6;
+    color: #fff;
+    border-radius: 100px;
+    align-items: center;
+}
 
 
 /* --- 모바일 반응형 (시안대로 적용) --- */
@@ -164,20 +199,20 @@ nav {
     /* 별(치아) 아이콘: 이미지 위에 둥둥 뜨게 재설정 */
     .motify-teeth {
         position: absolute;
-        /* 부모인 .kv-container 기준 */
+       
         right: 20px;
-        /* 우측 하단에서 20px 띄우기 */
+       
         bottom: 20px;
-        /* 하단에서 20px 띄우기 */
+        
         left: auto;
-        /* 기존 left 값 초기화 */
+       
         top: auto;
-        /* 기존 top 값 초기화 */
+        
         width: 60px;
-        /* 크기 조절 (시안에 맞춰 적당히) */
+        
         height: auto;
         z-index: 10;
-        /* 사진(z-index:1)보다 높게 설정 */
+        
     }
 
     .motify-teeth img {
@@ -197,8 +232,7 @@ nav {
 
     }
 
-    /* 시안처럼 '메뉴 글자' 대신 '햄버거 버튼'을 쓸 것이 아니라면 
-       글자 크기를 대폭 줄이거나 세로 정렬을 해야 합니다. */
+
     .navi {
         display: none;
         gap: 15px;
