@@ -58,9 +58,11 @@ nav {
     background: #fff;
     padding: 120px 0;
 }
-.kv-section h4{
+
+.kv-section h4 {
     color: #808080;
 }
+
 .kv-container {
     max-width: 1440px;
     margin: 0 auto;
@@ -105,11 +107,11 @@ nav {
 
 
 
-.section02{
+.section02 {
     background-color: #0046B6;
     display: flex;
     align-items: center;
-   
+
 }
 
 .sec02-container {
@@ -123,10 +125,12 @@ nav {
     width: 100%;
     max-width: 1440px;
 }
-.sec02-img{
+
+.sec02-img {
     mix-blend-mode: luminosity;
 }
-.section03{
+
+.section03 {
     background-image: url(../images/section-3-bg.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -142,10 +146,10 @@ nav {
     margin: 0 auto;
     width: 100%;
     max-width: 1440px;
-    
+
 }
 
-.sec03-container h1{
+.sec03-container h1 {
     color: #0046B6;
 }
 
@@ -161,20 +165,119 @@ nav {
     max-width: 708px;
 }
 
-.bar-text{
+.bar-text {
     color: #202022;
 }
 
-.bar-number{
-    padding: 9px 12px ;
+.bar-number {
+    padding: 9px 12px;
     background-color: #0046B6;
     color: #fff;
     border-radius: 100px;
     align-items: center;
 }
 
+.sec04 {
+    margin: auto;
+    padding: 120px;
 
-/* --- 모바일 반응형 (시안대로 적용) --- */
+}
+
+.sec04-container {
+    justify-content: center;
+    display: flex;
+    gap: 120px;
+    align-items: center;
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.score-bar-1 {
+    background-color: #F2F8FF;
+    border-radius: 15px;
+    color: #0046B6;
+    padding: 20px;
+    max-width: 471px;
+    width: 100%;
+}
+
+.score-bar-2 {
+    background-color: #F2F8FF;
+    border-radius: 15px;
+    color: #202022;
+    padding: 20px;
+    max-width: 471px;
+    width: 100%;
+}
+
+
+.medical-container {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    gap: 12px;
+}
+
+.medical-container h3 {
+    margin-top: 20px;
+}
+
+.sec05{
+    background-image: url(../images/section-5-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+    padding: 120px 0;
+}
+
+.sec05-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.sec05-title{
+    color: #fff;
+}
+
+.sec05-txt{
+    color: #fff;
+    padding: 60px 0;
+}
+
+.system-bar{
+    max-width: 467px;
+    width: 100%;
+    color: #202022;
+    background-color: #fff;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+
+
+@media (max-width: 1024px) {
+
+    .kv-content {
+        width: 55%;
+    }
+
+    .kv-photo-wrap {
+        width: 45%;
+    }
+
+}
+
+
+
 @media (max-width: 768px) {
     .kv-section {
         padding: 60px 0 16px;
@@ -185,7 +288,7 @@ nav {
         flex-direction: column;
         /* 위(텍스트), 아래(이미지) 배치 */
         align-items: flex-start;
-        
+
     }
 
     .kv-content {
@@ -197,7 +300,6 @@ nav {
         /* 이미지와의 간격 */
     }
 
-    /* 이미지 영역: absolute를 static으로 풀어주는게 핵심 */
     .kv-photo-wrap {
         position: static;
         transform: none;
@@ -214,22 +316,20 @@ nav {
     /* 별(치아) 아이콘: 이미지 위에 둥둥 뜨게 재설정 */
     .motify-teeth {
         position: absolute;
-       
+
         right: 40px;
-       
+
         bottom: 40px;
-        
+
         left: auto;
-       
+
         top: auto;
-        
-        
+
         height: auto;
         z-index: 10;
-        
     }
 
-    .key-txt-2{
+    .key-txt-2 {
         margin-top: 40px;
     }
 
@@ -238,13 +338,13 @@ nav {
         width: 100%;
     }
 
-     .gnb {
-            display: none;
-        }
+    .gnb {
+        display: none;
+    }
 
-        .hamburger {
-            display: block;
-        }
+    .hamburger {
+        display: block;
+    }
 
     nav {
         padding: 15px 20px;
@@ -263,12 +363,11 @@ nav {
         /* 모바일용 글자 크기 */
     }
 
-    .sec02-container{
-        font-size: 26px;
+    .sec02-container {
+        font-size: 1.625rem;
         padding: 100px 16px;
     }
 
 
 
 }
-
