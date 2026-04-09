@@ -8,9 +8,12 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/commons.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
 </head>
 
 <body>
+
     <header class="header-wrap">
         <nav class="nav">
             <nav>
@@ -27,9 +30,11 @@
                         <li><a href="#">예약하기</a></li>
                     </ul>
                 </div>
+                <div class="hambergur"><img src="assets/images/hamburger.svg" alt=""></div>
             </nav>
         </nav>
     </header>
+
 
     <section class="kv-section">
         <div class="kv-container">
@@ -59,6 +64,7 @@
             </div>
         </div>
     </section>
+
 
     <section class="section02">
         <div class="sec02-container">
@@ -184,8 +190,6 @@
 
     <section class="sec06">
         <div class="sec06-container">
-
-
             <div class="case-text">
                 <div class="case-title">
                     <h1>실제 치료 사례</h1>
@@ -195,37 +199,98 @@
                         케이스별 다양한 경험, 안심하고 받으실 수 있습니다.</p>
                 </div>
             </div>
-            <div class="BnA">
-                <div class="bna-photo">
-                    <img src="assets/images/before.png" alt="">
-                    <img src="assets/images/before.png" alt="">
+
+            <div class="bna">
+                <div class="before">
+                    <div class="bna-photo">
+                        <img src="assets/images/before.png" alt="치료 전">
+                    </div>
+                    <div class="bna-text">
+                        <p>Before</p>
+                    </div>
                 </div>
 
-                <div class="bna-text">
-                    <p>before</p>
-                    <p>개인별 치료 결과는 다를 수 있습니다.</p>
-                    <p>After</p>
-
+                <div class="after">
+                    <div class="bna-photo">
+                        <img src="assets/images/after.png" alt="치료 후">
+                    </div>
+                    <div class="bna-text">
+                        <p>After</p>
+                    </div>
                 </div>
+            </div>
 
+            <div class="bna-info">
+                <p>개인별 치료 결과는 다를 수 있습니다.</p>
             </div>
         </div>
     </section>
-    <section class="sec07">
-        <div class="sec07-container">
-            <div class="intro-title">
-                <div class="title-text-1">
-                    <p>당신이 기다려온 편안한 진료의 시작</p>
-                    <h2>주요 진료</h2>
-                </div>
 
-                <div class="section-7-motify">
-                    <img src="assets/images/logo-horizental-motify.svg" alt="로고 모티프">
-                </div>
+    <section class="sec07" aria-labelledby="sec07-heading">
+        <div class="sec07-inner">
+            <div class="sec07__header">
+                <h1>text</h1>
             </div>
 
-            <div class="card-contents">
-                <H1>slide</H1>
+            <div class="sec07__viewport">
+                <!-- Swiper -->
+                <div class="swiper sec07__slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="sec07__slider-img">
+                                <img src="assets/images/major-1.png" alt="">
+                            </div>
+                            <div class="sec07__slider-text">
+                                <h4>임플란트</h4>
+                                <p>통증과 두려움을 낮춘<br>
+                                    섬세한 저통증 안심 케어</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="sec07__slider-img">
+                                <img src="assets/images/major-1.png" alt="">
+                            </div>
+                            <div class="sec07__slider-text">
+                                <h4>임플란트</h4>
+                                <p>통증과 두려움을 낮춘<br>
+                                    섬세한 저통증 안심 케어</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="sec07__slider-img">
+                                <img src="assets/images/major-1.png" alt="">
+                            </div>
+                            <div class="sec07__slider-text">
+                                <h4>임플란트</h4>
+                                <p>통증과 두려움을 낮춘<br>
+                                    섬세한 저통증 안심 케어</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="sec07__slider-img">
+                                <img src="assets/images/major-1.png" alt="">
+                            </div>
+                            <div class="sec07__slider-text">
+                                <h4>임플란트</h4>
+                                <p>통증과 두려움을 낮춘<br>
+                                    섬세한 저통증 안심 케어</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="sec07__slider-img">
+                                <img src="assets/images/major-1.png" alt="">
+                            </div>
+                            <div class="sec07__slider-text">
+                                <h4>임플란트</h4>
+                                <p>통증과 두려움을 낮춘<br>
+                                    섬세한 저통증 안심 케어</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -281,6 +346,9 @@
                             </ul>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="sec09">
@@ -339,11 +407,12 @@
             </div>
 
             <button type="submit" class="cta-submit-btn">나의 미소 찾기</button>
-            </form>
-        </div>
-
         </div>
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/js/card.js"></script>
 </body>
 
 </html>
