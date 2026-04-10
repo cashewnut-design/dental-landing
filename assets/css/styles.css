@@ -1,5 +1,10 @@
 @import url(commons.css);
 
+/* 스크롤바 제거 */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
 
 header {
     margin: auto;
@@ -883,23 +888,14 @@ select.cta-input {
 
 
 
-/* @media (max-width: 1280px) and (min-width: 768px) {
+/* 모바일 반응형 (768px 이하) */
+@media (max-width: 768px) {
     nav {
         padding: 15px 20px;
-
     }
 
     .navi {
         display: none;
-        gap: 15px;
-    }
-
-    .gnb {
-        display: none;
-    }
-
-    .kv-section {
-        padding: 60px 0 16px;
     }
 
     .hambergur {
@@ -907,59 +903,164 @@ select.cta-input {
         cursor: pointer;
     }
 
-    .kv-container {
-        flex-direction: column;
-        align-items: flex-start;
-
+    .kv-section {
+        padding: 60px 20px;
     }
 
-    .kv-content {
-        padding: 0 16px;
-        width: 100%;
-        /* 텍스트가 가득 차게 */
-        /* text-align: left;
-        margin-bottom: 40px; */
-        /* 이미지와의 간격 */
-
-    /* .kv-photo-wrap {
-        width: 100%;
+    .kv-container {
+        flex-direction: column;
+        padding: 0;
     }
 
     .kv-photo-wrap {
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 60%;
+        position: relative;
+        width: 100% !important;
+        right: auto;
+        margin-top: 40px;
     }
 
     .motify-teeth {
         position: relative;
-
-        right: 10%;
-
-        bottom: 4%;
-
         left: auto;
-
-        top: auto;
-
-        height: auto;
-        z-index: 10;
-    }
-
-    .key-txt-2 {
-        margin-top: 40px;
-    }
-
-
-    .motify-teeth img {
-        width: 100%;
+        bottom: auto;
+        width: 60px;
+        margin-top: 20px;
     }
 
     .sec02-container {
-        font-size: 1.625rem;
-        padding: 100px 16px;}
-} */ 
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 20px;
+    }
+
+    .sec02-img {
+        width: 100%;
+    }
+
+    .sec03-container {
+        padding: 40px 20px;
+    }
+
+    .sec04-container {
+        flex-direction: column;
+        padding: 60px 20px;
+        gap: 40px;
+    }
+
+    .score {
+        width: 100%;
+    }
+
+    .score-bar-1,
+    .score-bar-2 {
+        max-width: 100%;
+    }
+
+    .sec05-container {
+        padding: 60px 20px;
+    }
+
+    .system-bar {
+        max-width: 100%;
+    }
+
+    .sec06-container {
+        padding: 0 20px;
+    }
+
+    .bna {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .before, .after {
+        width: 100%;
+    }
+
+    .sec07 {
+        min-height: auto;
+        padding: 60px 0;
+    }
+
+    .sec07-inner {
+        padding: 30px 20px;
+    }
+
+    .sec07__header img {
+        left: 0 !important;
+        margin-bottom: 30px;
+    }
+
+    .sec07__intro {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 20px 0;
+    }
+
+    .sec08-container {
+        padding: 0 20px;
+    }
+
+    .profile-container {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .profile-container > img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .profile-details {
+        width: 100%;
+    }
+
+    .sec09-container {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .sec09-text h1 {
+        margin-bottom: 20px;
+    }
+
+    .sec09 img {
+        width: 100%;
+    }
+
+    .sec09-img img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .sec10-container {
+        flex-direction: column;
+        padding: 0 20px;
+        gap: 40px;
+    }
+
+    .cta-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .contact-inner {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 30px;
+    }
+
+    .map-area {
+        height: 300px;
+        width: 100%;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        gap: 30px;
+        padding: 0 20px;
+    }
+} 
 
 
