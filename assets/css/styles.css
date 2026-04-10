@@ -47,6 +47,7 @@ nav {
     position: relative;
     background: #fff;
     padding: 120px 0;
+
 }
 
 .kv-section h4 {
@@ -70,8 +71,7 @@ nav {
 .kv-photo-wrap {
     position: absolute;
     right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+
     width: 60%;
 }
 
@@ -301,7 +301,7 @@ nav {
 :root {
     --sec07-accent: #0046b6;
     --sec07-text: #202022;
-    --sec07-muted: #5c5c62;
+    --sec07-muted: #808080;
     --sec07-shadow: 0 16px 48px rgba(32, 32, 34, 0.07);
     --sec07-shadow-hover: 0 22px 56px rgba(0, 70, 182, 0.12);
   }
