@@ -1056,10 +1056,46 @@ select.cta-input {
         width: 100%;
     }
 
+    .footer {
+        padding: 40px 0 48px;
+    }
+
     .footer-inner {
         flex-direction: column;
-        gap: 30px;
-        padding: 0 20px;
+        align-items: center;
+        justify-content: center;
+        gap: clamp(24px, 5vw, 36px);
+        padding: 0 24px;
+        text-align: center;
+    }
+
+    .footer-info {
+        align-items: center;
+        gap: 18px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .footer-logo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-text {
+        align-items: center;
+        gap: 6px;
+        max-width: 36rem;
+        margin: 0 auto;
+    }
+
+    .footer-text p {
+        text-align: center;
+    }
+
+    .footer-sns {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
     }
 } 
 
