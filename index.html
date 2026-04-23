@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
 
 <head>
@@ -9,12 +9,13 @@
     <link rel="stylesheet" href="assets/css/commons.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 
 </head>
 
 <body>
 
-    <header class="header-wrap">
+    <header class="header-wrap" data-aos="fade-down" data-aos-duration="600">
         <nav class="nav">
             <nav>
                 <div class="logo">
@@ -38,7 +39,7 @@
 <section class="kv-section">
     <div class="kv-container">
 
-        <div class="kv-content">
+        <div class="kv-content" data-aos="fade-up" data-aos-duration="800">
             <div class="motify-logo">
                 <img src="assets/images/motify-logo-1.svg" alt="모티프 로고">
             </div>
@@ -55,7 +56,7 @@
         </div>
 
         <!-- ✅ kv-photo-wrap을 kv-container 안으로 이동 -->
-        <div class="kv-photo-wrap">
+        <div class="kv-photo-wrap" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
             <img src="assets/images/main-photo-family.png" alt="행복한 가족" class="main-photo">
             <div class="motify-teeth">
                 <img src="assets/images/motify-teeth-1.png" alt="star icon">
@@ -71,6 +72,7 @@
             <h1>현재 고민 중인 <br>치료가 있으신가요?</h1>
             <div class="sec02-img">
                 <img src="assets/images/teeth-photo.png" alt="이빨사진">
+
             </div>
         </div>
     </section>
@@ -78,11 +80,11 @@
     <section class="section03">
 
         <div class="sec03-container">
-            <div class="section03-txt">
+            <div class="section03-txt" data-aos="fade-up" data-aos-duration="700">
                 <h1>이런 고민이 있으세요?</h1>
             </div>
 
-            <div class="sec03-bar">
+            <div class="sec03-bar" data-aos="fade-up" data-aos-duration="650" data-aos-delay="80">
                 <div class="bar-number">
                     <h3>01</h3>
                 </div>
@@ -91,7 +93,7 @@
                 </div>
             </div>
 
-            <div class="sec03-bar">
+            <div class="sec03-bar" data-aos="fade-up" data-aos-duration="650" data-aos-delay="160">
                 <div class="bar-number">
                     <h3>02</h3>
                 </div>
@@ -100,7 +102,7 @@
                 </div>
             </div>
 
-            <div class="sec03-bar">
+            <div class="sec03-bar" data-aos="fade-up" data-aos-duration="650" data-aos-delay="240">
                 <div class="bar-number">
                     <h3>03</h3>
                 </div>
@@ -109,7 +111,7 @@
                 </div>
             </div>
 
-            <div class="sec03-bar">
+            <div class="sec03-bar" data-aos="fade-up" data-aos-duration="650" data-aos-delay="320">
                 <div class="bar-number">
                     <h3>04</h3>
                 </div>
@@ -123,7 +125,7 @@
 
     <section class="sec04">
         <div class="sec04-container">
-            <div class="score">
+            <div class="score" data-aos="fade-right" data-aos-duration="750">
                 <div class="score-text">
                     <h2>정밀 진단 기반 임플란트 치료</h2>
                 </div>
@@ -140,32 +142,49 @@
                 </div>
             </div>
 
-            <div class="medical-container">
-                <div class="medical-item">
-                    <img src="assets/images/card-1.png" alt="정밀진단">
-                    <h3>정밀진단</h3>
-                </div>
+            <div class="swiper medical-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="medical-item" data-aos="fade-up" data-aos-duration="700">
+                            <img src="assets/images/card-1.png" alt="정밀진단">
+                            <h3>정밀진단</h3>
+                        </div>
+                    </div>
 
-                <div class="medical-item">
-                    <img src="assets/images/card-1.png" alt="정밀진단">
-                    <h3>정밀진단</h3>
-                </div>
+                    <div class="swiper-slide">
+                        <div class="medical-item" data-aos="fade-up" data-aos-duration="700" data-aos-delay="120">
+                            <img src="assets/images/card-2.png" alt="정밀진단">
+                            <h3>맞춤 치료 계획</h3>
+                        </div>
+                    </div>
 
-                <div class="medical-item">
-                    <img src="assets/images/card-1.png" alt="정밀진단">
-                    <h3>정밀진단</h3>
+                    <div class="swiper-slide">
+                        <div class="medical-item" data-aos="fade-up" data-aos-duration="700" data-aos-delay="240">
+                            <img src="assets/images/card-3.png" alt="정밀진단">
+                            <h3>사후 관리</h3>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="medical-item" data-aos="fade-up" data-aos-duration="700" data-aos-delay="360">
+                            <img src="assets/images/card-4.png" alt="정밀진단">
+                            <h3>디지털 치료</h3>
+                        </div>
+                    </div>
                 </div>
+                <div class="swiper-button-prev medical-prev"></div>
+                <div class="swiper-button-next medical-next"></div>
             </div>
         </div>
     </section>
 
     <section class="sec05">
         <div class="sec05-container">
-            <div class="sec05-title">
+            <div class="sec05-title" data-aos="fade-up" data-aos-duration="700">
                 <h1>컴퓨터 분석 시스템</h1>
             </div>
 
-            <div class="sec05-txt">
+            <div class="sec05-txt" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
                 <h3>3D 정밀 분석을 통해<br>
                     환자의 치아 구조를 정확하게 파악하고<br>
                     맞춤형 임플란트 치료 계획을 세웁니다.
@@ -190,7 +209,7 @@
 
     <section class="sec06">
         <div class="sec06-container">
-            <div class="case-text">
+            <div class="case-text" data-aos="fade-up" data-aos-duration="750">
                 <div class="case-title">
                     <h1>실제 치료 사례</h1>
                 </div>
@@ -200,7 +219,7 @@
                 </div>
             </div>
 
-            <div class="bna">
+            <div class="bna" data-aos="fade-up" data-aos-duration="750" data-aos-delay="120">
                 <div class="before">
                     <div class="bna-photo">
                         <img src="assets/images/before.png" alt="치료 전">
@@ -220,7 +239,7 @@
                 </div>
             </div>
 
-            <div class="bna-info">
+            <div class="bna-info" data-aos="fade-up" data-aos-duration="600" data-aos-delay="80">
                 <p>개인별 치료 결과는 다를 수 있습니다.</p>
             </div>
         </div>
@@ -228,14 +247,14 @@
 
     <section class="sec07" aria-labelledby="sec07-heading">
         <div class="sec07-inner">
-            <div class="sec07__header">
+            <div class="sec07__header" data-aos="fade-up" data-aos-duration="700">
                 <p>당신이 기다려온 편안한 진료의 시작</p>
                 <h1>주요 진료</h1>
                 <img src="assets/images/logo-horizental-motify-2.svg" alt="">
             </div>
 
-            <div class="sec07__viewport">
-                <!-- Swiper -->
+            <div class="sec07__viewport" data-aos="fade-up" data-aos-duration="750" data-aos-delay="100">
+                <div class="sec07__slider-wrap">
                 <div class="swiper sec07__slider">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -281,7 +300,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="swiper-pagination sec07__pagination"></div>
                 </div>
 
             </div>
@@ -290,9 +310,9 @@
 
     <section class="sec08">
         <div class="sec08-container">
-            <h2 class="section-title">의료진 소개</h2>
+            <h2 class="section-title" data-aos="fade-up" data-aos-duration="700">의료진 소개</h2>
 
-            <div class="profile-container">
+            <div class="profile-container" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                 <img src="assets/images/profile.png" alt="의료진 프로필">
 
                 <div class="profile-details">
@@ -346,14 +366,14 @@
 
     <section class="sec09">
         <div class="sec09-container">
-            <div class="sec09-text">
+            <div class="sec09-text" data-aos="fade-up" data-aos-duration="750">
                 <h1>진심을 담은 진료<br>미소의 본질에 집중합니다.</h1>
                 <p>치과 앞에서의 망설임, 누구보다 잘 알기에.<br>
                     통증에 대한 두려움과 막연한 불안까지 살피겠습니다.<br>
                     맑은미소는 단순한 치료를 넘어 정직한 진료를 약속합니다.</p>
             </div>
 
-            <div class="sec09-img">
+            <div class="sec09-img" data-aos="fade-up" data-aos-duration="750" data-aos-delay="120">
                 <img src="assets/images/logo-horizental-motify-2.svg" alt="로고 모티프">
             </div>
         </div>
@@ -363,7 +383,7 @@
     <section class="sec10">
         <div class="sec10-container">
 
-            <div class="sec10-left-text">
+            <div class="sec10-left-text" data-aos="fade-right" data-aos-duration="750">
                 <h2>편안한 상담</h2>
                 <h3>정확한 상담을 위해서<br>상담 문의 주세요.</h3>
                 <div class="desc-group">
@@ -373,30 +393,32 @@
                 </div>
             </div>
 
-            <div class="cta-card">
+            <div class="cta-area" data-aos="fade-left" data-aos-duration="750" data-aos-delay="80">
                 <img src="assets/images/logo.svg" alt="맑은미소 치과" class="cta-logo">
 
-                <h4>예약 후 방문하시면<br>대기 시간을 줄일 수 있습니다.</h4>
+                <div class="cta-card" data-aos="fade-left" data-aos-duration="750" data-aos-delay="100">
+                    <h4>예약 후 방문하시면<br>대기 시간을 줄일 수 있습니다.</h4>
 
-                <select class="cta-input full">
-                    <option value="" disabled selected>카테고리</option>
-                </select>
+                    <select class="cta-input full">
+                        <option value="" disabled selected>카테고리</option>
+                    </select>
 
-                <select class="cta-input full">
-                    <option value="" disabled selected>생년월일</option>
-                </select>
+                    <select class="cta-input full">
+                        <option value="" disabled selected>생년월일</option>
+                    </select>
 
-                <div class="input-row">
-                    <input type="text" class="cta-input" placeholder="성함">
-                    <input type="tel" class="cta-input" placeholder="연락처">
+                    <div class="input-row">
+                        <input type="text" class="cta-input" placeholder="성함">
+                        <input type="tel" class="cta-input" placeholder="연락처">
+                    </div>
+
+                    <div class="agree-check">
+                        <input type="checkbox" id="agree">
+                        <label for="agree">개인정보 수집 및 <a href="#">개인정보처리방침</a>에 관한 취급을 동의합니다.</label>
+                    </div>
+
+                    <button type="submit" class="cta-submit-btn">나의 미소 공간 찾기</button>
                 </div>
-
-                <div class="agree-check">
-                    <input type="checkbox" id="agree">
-                    <label for="agree">개인정보 수집 및 <a href="#">개인정보처리방침</a>에 관한 취급을 동의합니다.</label>
-                </div>
-
-                <button type="submit" class="cta-submit-btn">나의 미소 공간 찾기</button>
             </div>
 
         </div>
@@ -407,7 +429,7 @@
         <div class="contact-inner">
 
 
-            <div class="contact-info">
+            <div class="contact-info" data-aos="fade-up" data-aos-duration="750">
 
 
                 <div class="contact-box">
@@ -453,7 +475,7 @@
 
             </div>
 
-            <div class="map-area">
+            <div class="map-area" data-aos="fade-up" data-aos-duration="750" data-aos-delay="120">
                 <img src="assets/images/map.png" alt="지도">
             </div>
 
@@ -464,7 +486,7 @@
 
     <footer class="footer">
 
-        <div class="footer-inner">
+        <div class="footer-inner" data-aos="fade-up" data-aos-duration="700">
 
 
             <div class="footer-info">
@@ -505,9 +527,14 @@
 
     </footer>
 
+    <a class="floating-btn" href="#" aria-label="카카오톡 상담 바로가기">
+        <img src="assets/images/kakao.png" alt="카카오톡 상담">
+    </a>
+
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="assets/js/card.js"></script>
 
 </body>
