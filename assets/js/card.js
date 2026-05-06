@@ -92,32 +92,74 @@ try {
   console.warn("sec07 Swiper init:", e);
 }
 
+var medicalSwiper = null;
+
+function syncSec04MedicalSwiperHeight() {
+  var root = document.querySelector(".sec04-container");
+  if (!root) {
+    return;
+  }
+  var score = root.querySelector(".score");
+  var swiperEl = root.querySelector(".medical-swiper");
+  if (!score || !swiperEl) {
+    return;
+  }
+  /* 모바일(세로 배치)에서는 좌측 블록 전체 높이를 그대로 쓰면 슬라이더가 과도하게 커짐 */
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    swiperEl.style.minHeight = "";
+    swiperEl.style.height = "";
+  } else {
+    var h = score.offsetHeight;
+    swiperEl.style.minHeight = h + "px";
+    swiperEl.style.height = h + "px";
+  }
+  if (medicalSwiper && medicalSwiper.update) {
+    medicalSwiper.update();
+  }
+}
+
 try {
-  var medicalSwiper = new Swiper(".medical-swiper", {
-    loop: true,
+  medicalSwiper = new Swiper(".medical-swiper", {
+    loop: false,
+    speed: 450,
+    watchOverflow: false,
+    autoHeight: false,
+    slidesPerView: 1,
+    spaceBetween: 12,
     navigation: {
       nextEl: ".medical-next",
       prevEl: ".medical-prev",
     },
     breakpoints: {
-      1280: {
-        slidesPerView: 4,
-        spaceBetween: 24,
-      },
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 20,
-      },
       768: {
         slidesPerView: 2,
         spaceBetween: 16,
       },
-      0: {
-        slidesPerView: 1,
-        spaceBetween: 12,
+      1024: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1280: {
+        slidesPerView: 2.15,
+        spaceBetween: 24,
       },
     },
   });
+
+  syncSec04MedicalSwiperHeight();
+  window.addEventListener("load", syncSec04MedicalSwiperHeight);
+  window.addEventListener("resize", function () {
+    requestAnimationFrame(syncSec04MedicalSwiperHeight);
+  });
+  setTimeout(syncSec04MedicalSwiperHeight, 400);
+
+  var scoreEl = document.querySelector(".sec04-container .score");
+  if (scoreEl && typeof ResizeObserver !== "undefined") {
+    var ro = new ResizeObserver(function () {
+      syncSec04MedicalSwiperHeight();
+    });
+    ro.observe(scoreEl);
+  }
 } catch (e) {
   console.warn("medical Swiper init:", e);
 }

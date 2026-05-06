@@ -256,27 +256,30 @@ nav {
 
 .medical-swiper .swiper-button-prev,
 .medical-swiper .swiper-button-next {
-    color: #0044BB;
+    color: #0044bb;
+    width: 44px;
+    height: 44px;
+    top: 50%;
+    /* top:50%는 버튼 상단 기준이라, 높이의 절반만큼 올려야 진짜 중앙 */
+    margin-top: -22px;
+    z-index: 3;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 50%;
+    box-shadow: 0 2px 12px rgba(17, 24, 39, 0.12);
 }
 
 .medical-swiper .swiper-button-prev::after,
 .medical-swiper .swiper-button-next::after {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
 }
 
-@media (min-width: 1024px) {
-    .medical-swiper .swiper-button-prev,
-    .medical-swiper .swiper-button-next {
-        display: none;
-    }
+.medical-swiper .swiper-button-prev {
+    left: 6px;
 }
 
-@media (max-width: 1023px) {
-    .medical-swiper .swiper-button-prev,
-    .medical-swiper .swiper-button-next {
-        display: flex;
-    }
+.medical-swiper .swiper-button-next {
+    right: 6px;
 }
 
 .sec05 {
@@ -479,20 +482,6 @@ nav {
     justify-content: center;
     background-color: #ffffff;
 }
-
-.sec08-container {
-    align-items: center;
-    justify-content: center;
-    
-}
-
-.section-title {
-    position: relative;
-    left: 25%;
-    margin-bottom: 40px;
-    color: #202022;
-}
-
 
 .profile-container {
     display: flex;
@@ -1532,6 +1521,9 @@ nav,
 }
 
 .sec08-container {
+    width: 100%;
+    max-width: var(--container-max);
+    margin: 0 auto;
     padding: 0 24px;
     box-sizing: border-box;
 }
@@ -1785,7 +1777,7 @@ nav,
 
 }
 
-/* sec04 layout stabilization: score top, slider bottom */
+/* sec04: 좌측 카피·우측 진료 카드 슬라이더 정렬 */
 .sec04 {
     padding: 120px 0;
 }
@@ -1802,17 +1794,85 @@ nav,
 }
 
 .score {
-    flex: 0 0 420px;
-    max-width: 420px;
+    flex: 0 0 auto;
+    width: min(100%, 540px);
+    max-width: 540px;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.score-text h2 {
+    margin: 0;
+    line-height: 1.25;
+    word-break: keep-all;
+}
+
+@media (min-width: 769px) {
+    .score-text h2 {
+        white-space: nowrap;
+    }
 }
 
 .medical-swiper {
     flex: 1 1 auto;
     min-width: 0;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 0;
+    padding: 6px 48px;
+    box-sizing: border-box;
+}
+
+.medical-swiper .swiper-wrapper {
+    flex: 1 1 auto;
+    min-height: 0;
+    height: 100%;
+    align-items: stretch;
+}
+
+.medical-swiper .swiper-slide {
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+    box-sizing: border-box;
 }
 
 .medical-item {
+    flex: 1 1 auto;
     min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.medical-item img {
+    flex: 1 1 auto;
+    width: 100%;
+    min-height: 0;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.medical-item h3 {
+    flex-shrink: 0;
+    margin: 16px 0 0;
+    font-family: "Paperlogy", "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    font-size: 32pt;
+    font-weight: 500;
+    line-height: 1.25;
+    color: var(--text-main, #202022);
+}
+
+.sec04 .score-bar-1,
+.sec04 .score-bar-2 {
+    max-width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -1826,7 +1886,7 @@ nav,
         min-height: auto;
         flex: none;
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
         padding: 0 20px;
         gap: 24px;
     }
@@ -1835,6 +1895,19 @@ nav,
         flex: none;
         width: 100%;
         max-width: 100%;
+    }
+
+    .score-text h2 {
+        white-space: normal;
+    }
+
+    .medical-swiper {
+        padding: 6px 40px;
+        min-height: 280px;
+    }
+
+    .medical-item h3 {
+        font-size: clamp(1.25rem, 6vw, 1.75rem);
     }
 
     .score-bar-1,
