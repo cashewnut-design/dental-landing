@@ -600,25 +600,30 @@ nav {
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
+    display: grid;
+    grid-template-columns: 1fr minmax(0, min(100%, 380px));
+    grid-template-rows: auto 1fr;
+    column-gap: 40px;
+    row-gap: 0;
+    align-items: start;
+    box-sizing: border-box;
 }
 
-/* 3. 좌측 텍스트 영역 */
-.sec09-text {
-    flex: 1; /* 남은 공간을 비율에 맞게 유연하게 채움 */
-}
-
-.sec09-text h1 {
-    margin: 0 0 40px 0; /* 제목과 본문 사이의 여백 */
-
-    color: #0047b3;
+.sec09-heading {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0 0 40px 0;
+    color: #0046B6;
     line-height: 1.4;
 }
 
-.sec09-text p {
+.sec09-body {
+    grid-column: 1;
+    grid-row: 2;
+    min-width: 0;
+}
+
+.sec09-body p {
     margin: 0;
     font-size: 16px;
     font-weight: 400;
@@ -626,16 +631,22 @@ nav {
     line-height: 1.8;
 }
 
-.sec09 img {
-    flex: 1;
+.sec09-img {
+    grid-column: 2;
+    grid-row: 1 / -1;
     display: flex;
     justify-content: center;
+    align-items: center;
+    min-width: 0;
+    align-self: center;
 }
 
 .sec09-img img {
-    max-width: 100%;
+    width: 100%;
+    max-width: min(100%, 380px);
     height: auto;
-    width: 360px;
+    display: block;
+    object-fit: contain;
 }
  
 .sec10 {
@@ -1187,21 +1198,45 @@ select.cta-input {
     }
 
     .sec09-container {
+        display: flex;
         flex-direction: column;
+        align-items: stretch;
         padding: 0 20px;
-    }
-
-    .sec09-text h1 {
-        margin-bottom: 20px;
-    }
-
-    .sec09 img {
+        gap: 20px;
         width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .sec09-heading {
+        margin: 0;
+        width: 100%;
+    }
+
+    /* 로고: 가로 중앙 (본문은 왼쪽 정렬 유지) */
+    .sec09-img {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: stretch;
     }
 
     .sec09-img img {
         width: 100%;
         max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .sec09-body {
+        width: 100%;
+        text-align: left;
+    }
+
+    .sec09-body p {
+        font-size: clamp(17px, 4.25vw, 18px);
+        max-width: none;
     }
 
     .sec10-container {
@@ -1324,8 +1359,7 @@ nav,
 /* 브랜드 컬러 통일 */
 .navi a,
 .sec03-container h1,
-.hosptial h4,
-.sec09-text h1 {
+.hosptial h4 {
     color: var(--brand-primary);
 }
 
@@ -1360,11 +1394,15 @@ nav,
     background-color: var(--bg-soft-blue);
 }
 
+.sec09 .sec09-heading {
+    color: #0046B6;
+}
+
 /* 텍스트 가독성 */
 .kv-section h4,
 .detail-group li,
 .sec10-left-text .desc-group p,
-.sec09-text p,
+.sec09-body p,
 .agree-check label {
     color: var(--text-muted);
 }
