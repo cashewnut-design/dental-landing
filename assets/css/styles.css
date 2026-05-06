@@ -385,10 +385,13 @@ nav {
     width: 100%;
   }
 
-  .sec07__header img{
+  .sec07__header img {
     display: block;
-    margin-left: auto;
-    margin-bottom: 40px;
+    width: 100%;
+    max-width: min(100%, 420px);
+    height: auto;
+    margin: 0 auto 40px;
+    object-fit: contain;
   }
   
   /* 상단 인트로 (고정 높이 · 넉넉한 패딩) */
@@ -626,16 +629,20 @@ nav {
     line-height: 1.8;
 }
 
-.sec09 img {
+.sec09-img {
     flex: 1;
     display: flex;
     justify-content: center;
+    align-items: center;
+    min-width: 0;
 }
 
 .sec09-img img {
-    max-width: 100%;
+    width: 100%;
+    max-width: min(100%, 380px);
     height: auto;
-    width: 360px;
+    display: block;
+    object-fit: contain;
 }
  
 .sec10 {
@@ -1122,9 +1129,10 @@ select.cta-input {
     }
 
     .sec07__header img {
-        margin-left: 0;
-        margin-bottom: 30px;
-        max-width: 180px;
+        margin: 0 auto 24px;
+        max-width: min(100%, 280px);
+        width: 100%;
+        height: auto;
     }
 
     .sec07__intro {
@@ -1195,13 +1203,15 @@ select.cta-input {
         margin-bottom: 20px;
     }
 
-    .sec09 img {
+    .sec09-img {
         width: 100%;
+        justify-content: center;
     }
 
     .sec09-img img {
         width: 100%;
-        max-width: 100%;
+        max-width: min(100%, 260px);
+        height: auto;
     }
 
     .sec10-container {
