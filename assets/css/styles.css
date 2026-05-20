@@ -380,30 +380,55 @@ nav {
     background: #fafbfd;
     box-sizing: border-box;
   }
-  .sec07-inner{
-    padding: 60px 30px;
+  .sec07-inner {
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: clamp(2rem, 5vw, 3.75rem) 24px;
+    box-sizing: border-box;
   }
 
-  .sec07__header img{
-    display: block;
-    margin-left: auto;
-    margin-bottom: 40px;
-  }
-  
-  /* 상단 인트로 (고정 높이 · 넉넉한 패딩) */
-  .sec07__intro {
-    flex-shrink: 0;
+  /* 상단: 좌측 카피·제목 / 우측 모티프 로고 */
+  .sec07__header {
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
+    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
-    gap: 1.5rem 2rem;
-    padding: clamp(2rem, 5vw, 3.5rem) clamp(1.25rem, 4vw, 3rem) clamp(1.25rem, 3vw, 2rem);
-    max-width: 1440px;
+    gap: 0;
     width: 100%;
-    margin: 0 auto;
+    margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
     box-sizing: border-box;
+  }
+
+  .sec07__header-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .sec07__header p {
+    margin: 0;
+    color: var(--sec07-muted);
+    line-height: 1.35;
+  }
+
+  .sec07__header h1 {
+    margin: 0;
+    margin-bottom: 0;
+    color: var(--sec07-text);
+    line-height: 1.15;
+  }
+
+  .sec07__header img {
+    flex-shrink: 0;
+    display: block;
+    width: auto;
+    max-width: min(100%, 420px);
+    height: auto;
+    margin: 0;
+    object-fit: contain;
   }
 
   .sec07__slider {
@@ -447,9 +472,9 @@ nav {
   }
 
   .sec07__viewport {
-    max-width: 1440px;
-    margin: 0 auto;
     width: 100%;
+    max-width: 100%;
+    margin: 0;
     box-sizing: border-box;
   }
 
@@ -1149,16 +1174,20 @@ select.cta-input {
         padding: 30px 20px;
     }
 
-    .sec07__header img {
-        margin-left: 0;
-        margin-bottom: 30px;
-        max-width: 180px;
+    .sec07__header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0;
+        margin-bottom: 24px;
     }
 
-    .sec07__intro {
-        flex-direction: column;
-        align-items: stretch;
-        padding: 20px 0;
+    .sec07__header h1 {
+        margin-bottom: 0;
+    }
+
+    .sec07__header img {
+        max-width: min(42vw, 280px);
     }
 
     .sec07__viewport {
