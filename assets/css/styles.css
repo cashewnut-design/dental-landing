@@ -18,6 +18,25 @@ html, body {
     width: 100%;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* 고정 헤더 아래로 앵커 스크롤 시 제목이 가리지 않도록 */
+#page-top {
+    scroll-margin-top: 0;
+}
+
+section[id]:not(#page-top) {
+    scroll-margin-top: 96px;
+}
+
 h1, h2, h3, h4 {
     font-family: "Paperlogy", "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
 }
@@ -1476,6 +1495,23 @@ nav,
     flex-shrink: 0;
 }
 
+.logo a {
+    display: flex;
+    align-items: center;
+    line-height: 0;
+    text-decoration: none;
+}
+
+.logo a:focus-visible {
+    outline: 2px solid var(--brand-primary, #1565c0);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+.logo a img {
+    display: block;
+}
+
 .gnb {
     margin-left: auto;
     flex-shrink: 0;
@@ -1576,8 +1612,11 @@ nav,
 }
 
 .sec08-container {
+<<<<<<< Updated upstream
     width: 100%;
     max-width: var(--container-max);
+=======
+>>>>>>> Stashed changes
     margin: 0 auto;
     padding: 0 24px;
     box-sizing: border-box;

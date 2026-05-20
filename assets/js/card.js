@@ -2,15 +2,6 @@
  * Swiper: sec07 major treatment slider
  * AOS: https://michalsnik.github.io/aos/
  */
-function applySec05AosAttributes() {
-  var bars = document.querySelectorAll(".sec05-container .system-bar");
-  for (var i = 0; i < bars.length; i++) {
-    bars[i].setAttribute("data-aos", "zoom-in");
-    bars[i].setAttribute("data-aos-duration", "650");
-    bars[i].setAttribute("data-aos-delay", String(80 + i * 80));
-  }
-}
-
 function aosFallback() {
   document.documentElement.classList.add("aos-fallback");
 }
@@ -162,12 +153,6 @@ try {
   }
 } catch (e) {
   console.warn("medical Swiper init:", e);
-}
-
-try {
-  applySec05AosAttributes();
-} catch (e) {
-  console.warn("sec05 AOS attrs:", e);
 }
 
 try {
