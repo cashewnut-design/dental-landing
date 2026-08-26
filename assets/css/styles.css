@@ -1531,6 +1531,11 @@ nav,
     line-height: 1.2;
 }
 
+/* 영문 메뉴는 단어 길이가 길어 보여서 4px 작게 조정 */
+:lang(en) .gnb .navi a {
+    font-size: clamp(16px, 2vw, 24px);
+}
+
 .hambergur {
     display: none;
 }
@@ -1859,6 +1864,127 @@ nav,
         background-color: #fff;
     }
 
+}
+
+/* ===== Language switcher (dropdown) ===== */
+.lang-select {
+    position: relative;
+}
+
+.lang-select__trigger {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border: 1px solid var(--color-secondary);
+    border-radius: 999px;
+    background-color: var(--color-primary);
+    color: var(--color-accent);
+    font-family: "Pretendard", "Noto Sans KR", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.2;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.lang-select__trigger:hover,
+.lang-select__trigger:focus-visible {
+    background-color: var(--color-secondary);
+}
+
+.lang-select__caret {
+    width: 7px;
+    height: 7px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg);
+    margin-top: -3px;
+    transition: transform 0.2s ease;
+}
+
+.lang-select.is-open .lang-select__caret {
+    transform: rotate(-135deg);
+    margin-top: 3px;
+}
+
+.lang-select__menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    min-width: 128px;
+    margin: 0;
+    padding: 6px;
+    list-style: none;
+    background-color: #fff;
+    border: 1px solid #e7edf4;
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(17, 24, 39, 0.12);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px);
+    transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s ease;
+    z-index: 10;
+}
+
+.lang-select.is-open .lang-select__menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.lang-select__option {
+    padding: 9px 12px;
+    border-radius: 8px;
+    font-family: "Pretendard", "Noto Sans KR", sans-serif;
+    font-size: 14px;
+    color: var(--color-neutral-1);
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.lang-select__option:hover {
+    background-color: var(--color-primary);
+}
+
+.lang-select__option.is-active {
+    color: var(--color-accent);
+    font-weight: 700;
+    background-color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+    .lang-select {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .lang-select__trigger {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .lang-select__menu {
+        position: static;
+        margin-top: 8px;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        display: none;
+    }
+
+    .lang-select.is-open .lang-select__menu {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .lang-select__option {
+        text-align: center;
+    }
 }
 
 /* sec04: 좌측 카피·우측 진료 카드 슬라이더 정렬 */

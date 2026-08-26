@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>맑은미소 치과의원 </title>
+    <title data-i18n="meta.title">맑은미소 치과의원 </title>
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/commons.css">
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -19,15 +19,26 @@
         <nav class="nav">
             <nav>
                 <div class="logo">
-                    <img src="assets/images/logo.svg" alt="맑은미소 치과의원">
+                    <img src="assets/images/logo.svg" alt="맑은미소 치과의원" data-i18n-attr="alt:header.logoAlt">
                 </div>
 
                 <div class="gnb">
                     <ul class="navi">
-                        <li><a href="#">주요진료</a></li>
-                        <li><a href="#">치료전후</a></li>
-                        <li><a href="#">진료시간</a></li>
-                        <li><a href="#">예약하기</a></li>
+                        <li><a href="#" data-i18n="nav.treatments">주요진료</a></li>
+                        <li><a href="#" data-i18n="nav.beforeAfter">치료전후</a></li>
+                        <li><a href="#" data-i18n="nav.hours">진료시간</a></li>
+                        <li><a href="#" data-i18n="nav.booking">예약하기</a></li>
+                        <li class="lang-select">
+                            <button type="button" class="lang-select__trigger" aria-haspopup="listbox" aria-expanded="false">
+                                <span class="lang-select__trigger-label">KOR</span>
+                                <span class="lang-select__caret" aria-hidden="true"></span>
+                            </button>
+                            <ul class="lang-select__menu" role="listbox">
+                                <li class="lang-select__option is-active" data-lang="ko" role="option" aria-selected="true">한국어</li>
+                                <li class="lang-select__option" data-lang="en" role="option" aria-selected="false">English</li>
+                                <li class="lang-select__option" data-lang="ja" role="option" aria-selected="false">日本語</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
                 <div class="hambergur"><img src="assets/images/hamburger.svg" alt=""></div>
@@ -41,25 +52,25 @@
 
         <div class="kv-content" data-aos="fade-up" data-aos-duration="800">
             <div class="motify-logo">
-                <img src="assets/images/motify-logo-1.svg" alt="모티프 로고">
+                <img src="assets/images/motify-logo-1.svg" alt="모티프 로고" data-i18n-attr="alt:kv.motifyLogoAlt">
             </div>
             <div class="key-txt-1">
-                <h4>맑게 개인 하늘처럼<br>환한 얼굴을 위한 정직한 진료</h4>
+                <h4 data-i18n="kv.tagline">맑게 개인 하늘처럼<br>환한 얼굴을 위한 정직한 진료</h4>
             </div>
             <div class="naming">
-                <h1>맑은미소 치과의원</h1>
+                <h1 data-i18n="kv.brand">맑은미소 치과의원</h1>
             </div>
             <div class="key-txt-2">
-                <p>깨끗하고 신뢰할 수 있는 진료 환경에서<br>
+                <p data-i18n="kv.desc">깨끗하고 신뢰할 수 있는 진료 환경에서<br>
                     임플란트·교정·심미치료를 제공합니다.</p>
             </div>
         </div>
 
         <!-- ✅ kv-photo-wrap을 kv-container 안으로 이동 -->
         <div class="kv-photo-wrap" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
-            <img src="assets/images/main-photo-family.png" alt="행복한 가족" class="main-photo">
+            <img src="assets/images/main-photo-family.png" alt="행복한 가족" class="main-photo" data-i18n-attr="alt:kv.photoAlt">
             <div class="motify-teeth">
-                <img src="assets/images/motify-teeth-1.png" alt="star icon">
+                <img src="assets/images/motify-teeth-1.png" alt="star icon" data-i18n-attr="alt:kv.teethIconAlt">
             </div>
         </div>
 
@@ -69,9 +80,9 @@
 
     <section class="section02">
         <div class="sec02-container">
-            <h1>현재 고민 중인 <br>치료가 있으신가요?</h1>
+            <h1 data-i18n="sec02.heading">현재 고민 중인 <br>치료가 있으신가요?</h1>
             <div class="sec02-img">
-                <img src="assets/images/teeth-photo.png" alt="이빨사진">
+                <img src="assets/images/teeth-photo.png" alt="이빨사진" data-i18n-attr="alt:sec02.imgAlt">
 
             </div>
         </div>
@@ -81,7 +92,7 @@
 
         <div class="sec03-container">
             <div class="section03-txt" data-aos="fade-up" data-aos-duration="700">
-                <h1>이런 고민이 있으세요?</h1>
+                <h1 data-i18n="sec03.heading">이런 고민이 있으세요?</h1>
             </div>
 
             <div class="sec03-bar" data-aos="fade-up" data-aos-duration="650" data-aos-delay="80">
@@ -89,7 +100,7 @@
                     <h3>01</h3>
                 </div>
                 <div class="bar-text">
-                    <h3>치아가 빠져 불편하다</h3>
+                    <h3 data-i18n="sec03.item1">치아가 빠져 불편하다</h3>
                 </div>
             </div>
 
@@ -98,7 +109,7 @@
                     <h3>02</h3>
                 </div>
                 <div class="bar-text">
-                    <h3>임플란트 상담이 필요하다</h3>
+                    <h3 data-i18n="sec03.item2">임플란트 상담이 필요하다</h3>
                 </div>
             </div>
 
@@ -107,7 +118,7 @@
                     <h3>03</h3>
                 </div>
                 <div class="bar-text">
-                    <h3>치아 배열이 고민이다</h3>
+                    <h3 data-i18n="sec03.item3">치아 배열이 고민이다</h3>
                 </div>
             </div>
 
@@ -116,7 +127,7 @@
                     <h3>04</h3>
                 </div>
                 <div class="bar-text">
-                    <h3>턱관절 통증이 있다</h3>
+                    <h3 data-i18n="sec03.item4">턱관절 통증이 있다</h3>
                 </div>
             </div>
 
@@ -127,53 +138,53 @@
         <div class="sec04-container">
             <div class="score" data-aos="fade-right" data-aos-duration="750">
                 <div class="score-text">
-                    <h2>정밀 진단 기반 임플란트 치료</h2>
+                    <h2 data-i18n="sec04.heading">정밀 진단 기반 임플란트 치료</h2>
                 </div>
 
                 <div class="score-bar-1">
-                    <p>네이버 예약 리뷰 평점</p>
-                    <h1>4.87 / 5.0</h1>
-                    <p>실제 방문 리뷰 6522건</p>
+                    <p data-i18n="sec04.reviewLabel">네이버 예약 리뷰 평점</p>
+                    <h1 data-i18n="sec04.reviewScore">4.87 / 5.0</h1>
+                    <p data-i18n="sec04.reviewCount">실제 방문 리뷰 6522건</p>
                 </div>
 
                 <div class="score-bar-2">
-                    <p>"설명도 친절하고 치료 과정이 편안했습니다."<br>
+                    <p data-i18n="sec04.quote">"설명도 친절하고 치료 과정이 편안했습니다."<br>
                         -네이버 리뷰</p>
                 </div>
             </div>
 
-            <div class="swiper medical-swiper" aria-roledescription="carousel" aria-label="진료 소개 슬라이드">
+            <div class="swiper medical-swiper" aria-roledescription="carousel" aria-label="진료 소개 슬라이드" data-i18n-attr="aria-label:sec04.swiperAria">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="medical-item">
-                            <img src="assets/images/card-1.png" alt="정밀진단 일러스트">
-                            <h3>정밀진단</h3>
+                            <img src="assets/images/card-1.png" alt="정밀진단 일러스트" data-i18n-attr="alt:sec04.card1Alt">
+                            <h3 data-i18n="sec04.card1Title">정밀진단</h3>
                         </div>
                     </div>
 
                     <div class="swiper-slide">
                         <div class="medical-item">
-                            <img src="assets/images/card-2.png" alt="맞춤 치료 계획 일러스트">
-                            <h3>맞춤 치료 계획</h3>
+                            <img src="assets/images/card-2.png" alt="맞춤 치료 계획 일러스트" data-i18n-attr="alt:sec04.card2Alt">
+                            <h3 data-i18n="sec04.card2Title">맞춤 치료 계획</h3>
                         </div>
                     </div>
 
                     <div class="swiper-slide">
                         <div class="medical-item">
-                            <img src="assets/images/card-3.png" alt="사후 관리 일러스트">
-                            <h3>사후 관리</h3>
+                            <img src="assets/images/card-3.png" alt="사후 관리 일러스트" data-i18n-attr="alt:sec04.card3Alt">
+                            <h3 data-i18n="sec04.card3Title">사후 관리</h3>
                         </div>
                     </div>
 
                     <div class="swiper-slide">
                         <div class="medical-item">
-                            <img src="assets/images/card-4.png" alt="디지털 치료 일러스트">
-                            <h3>디지털 치료</h3>
+                            <img src="assets/images/card-4.png" alt="디지털 치료 일러스트" data-i18n-attr="alt:sec04.card4Alt">
+                            <h3 data-i18n="sec04.card4Title">디지털 치료</h3>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-button-prev medical-prev" aria-label="이전 슬라이드"></div>
-                <div class="swiper-button-next medical-next" aria-label="다음 슬라이드"></div>
+                <div class="swiper-button-prev medical-prev" aria-label="이전 슬라이드" data-i18n-attr="aria-label:sec04.prevAria"></div>
+                <div class="swiper-button-next medical-next" aria-label="다음 슬라이드" data-i18n-attr="aria-label:sec04.nextAria"></div>
             </div>
         </div>
     </section>
@@ -181,27 +192,27 @@
     <section class="sec05">
         <div class="sec05-container">
             <div class="sec05-title" data-aos="fade-up" data-aos-duration="700">
-                <h1>컴퓨터 분석 시스템</h1>
+                <h1 data-i18n="sec05.heading">컴퓨터 분석 시스템</h1>
             </div>
 
             <div class="sec05-txt" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
-                <h3>3D 정밀 분석을 통해<br>
+                <h3 data-i18n="sec05.desc">3D 정밀 분석을 통해<br>
                     환자의 치아 구조를 정확하게 파악하고<br>
                     맞춤형 임플란트 치료 계획을 세웁니다.
                 </h3>
             </div>
 
             <div class="system-bar">
-                <p>3D CT 정밀 분석</p>
+                <p data-i18n="sec05.bar1">3D CT 정밀 분석</p>
             </div>
             <div class="system-bar">
-                <p>정품 임플란트 사용</p>
+                <p data-i18n="sec05.bar2">정품 임플란트 사용</p>
             </div>
             <div class="system-bar">
-                <p>디지털 임플란트 가이드</p>
+                <p data-i18n="sec05.bar3">디지털 임플란트 가이드</p>
             </div>
             <div class="system-bar">
-                <p>철저한 멸균 시스템</p>
+                <p data-i18n="sec05.bar4">철저한 멸균 시스템</p>
             </div>
 
         </div>
@@ -211,10 +222,10 @@
         <div class="sec06-container">
             <div class="case-text" data-aos="fade-up" data-aos-duration="750">
                 <div class="case-title">
-                    <h1>실제 치료 사례</h1>
+                    <h1 data-i18n="sec06.heading">실제 치료 사례</h1>
                 </div>
                 <div class="case-content">
-                    <p>임플란트, 걱정마세요<br>
+                    <p data-i18n="sec06.desc">임플란트, 걱정마세요<br>
                         케이스별 다양한 경험, 안심하고 받으실 수 있습니다.</p>
                 </div>
             </div>
@@ -222,25 +233,25 @@
             <div class="bna" data-aos="fade-up" data-aos-duration="750" data-aos-delay="120">
                 <div class="before">
                     <div class="bna-photo">
-                        <img src="assets/images/before.png" alt="치료 전">
+                        <img src="assets/images/before.png" alt="치료 전" data-i18n-attr="alt:sec06.beforeAlt">
                     </div>
                     <div class="bna-text">
-                        <p>Before</p>
+                        <p data-i18n="sec06.beforeLabel">Before</p>
                     </div>
                 </div>
 
                 <div class="after">
                     <div class="bna-photo">
-                        <img src="assets/images/after.png" alt="치료 후">
+                        <img src="assets/images/after.png" alt="치료 후" data-i18n-attr="alt:sec06.afterAlt">
                     </div>
                     <div class="bna-text">
-                        <p>After</p>
+                        <p data-i18n="sec06.afterLabel">After</p>
                     </div>
                 </div>
             </div>
 
             <div class="bna-info" data-aos="fade-up" data-aos-duration="600" data-aos-delay="80">
-                <p>개인별 치료 결과는 다를 수 있습니다.</p>
+                <p data-i18n="sec06.note">개인별 치료 결과는 다를 수 있습니다.</p>
             </div>
         </div>
     </section>
@@ -249,10 +260,10 @@
         <div class="sec07-inner">
             <div class="sec07__header" data-aos="fade-up" data-aos-duration="700">
                 <div class="sec07__header-text">
-                    <p>당신이 기다려온 편안한 진료의 시작</p>
-                    <h1 id="sec07-heading">주요 진료</h1>
+                    <p data-i18n="sec07.eyebrow">당신이 기다려온 편안한 진료의 시작</p>
+                    <h1 id="sec07-heading" data-i18n="sec07.heading">주요 진료</h1>
                 </div>
-                <img src="assets/images/logo-horizental-motify-2.svg" alt="맑은미소 모티프 로고">
+                <img src="assets/images/logo-horizental-motify-2.svg" alt="맑은미소 모티프 로고" data-i18n-attr="alt:sec07.logoAlt">
             </div>
 
             <div class="sec07__viewport" data-aos="fade-up" data-aos-duration="750" data-aos-delay="100">
@@ -264,8 +275,8 @@
                                 <img src="assets/images/major-1.png" alt="">
                             </div>
                             <div class="sec07__slider-text">
-                                <h4>임플란트</h4>
-                                <p>통증과 두려움을 낮춘<br>
+                                <h4 data-i18n="sec07.slide1Title">임플란트</h4>
+                                <p data-i18n="sec07.slide1Desc">통증과 두려움을 낮춘<br>
                                     섬세한 저통증 안심 케어</p>
                             </div>
                         </div>
@@ -274,8 +285,8 @@
                                 <img src="assets/images/major-2.png" alt="">
                             </div>
                             <div class="sec07__slider-text">
-                                <h4>교정치료</h4>
-                                <p>치아 구조 분석 기반 <br>
+                                <h4 data-i18n="sec07.slide2Title">교정치료</h4>
+                                <p data-i18n="sec07.slide2Desc">치아 구조 분석 기반 <br>
                                     교정 치료</p>
                             </div>
                         </div>
@@ -285,8 +296,8 @@
                                 <img src="assets/images/major-3.png" alt="">
                             </div>
                             <div class="sec07__slider-text">
-                                <h4>턱관절 진료</h4>
-                                <p>환자 한 분만을 위한<br>
+                                <h4 data-i18n="sec07.slide3Title">턱관절 진료</h4>
+                                <p data-i18n="sec07.slide3Desc">환자 한 분만을 위한<br>
                                     1:1 맞춤형 전담 책임진료</p>
                             </div>
                         </div>
@@ -296,8 +307,8 @@
                                 <img src="assets/images/major-4.png" alt="">
                             </div>
                             <div class="sec07__slider-text">
-                                <h4>일반진료</h4>
-                                <p>정기적인 검진으로<br>
+                                <h4 data-i18n="sec07.slide4Title">일반진료</h4>
+                                <p data-i18n="sec07.slide4Desc">정기적인 검진으로<br>
                                     치아 건강을 미리 확인하세요.</p>
                             </div>
                         </div>
@@ -312,52 +323,52 @@
 
     <section class="sec08">
         <div class="sec08-container">
-            <h2 class="section-title" data-aos="fade-up" data-aos-duration="700">의료진 소개</h2>
+            <h2 class="section-title" data-aos="fade-up" data-aos-duration="700" data-i18n="sec08.heading">의료진 소개</h2>
 
             <div class="profile-container" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
-                <img src="assets/images/profile.png" alt="의료진 프로필">
+                <img src="assets/images/profile.png" alt="의료진 프로필" data-i18n-attr="alt:sec08.profileAlt">
 
                 <div class="profile-details">
                     <div class="doctor-info">
                         <span class="hosptial">
-                            <h4>맑은미소 치과의원</h4>
+                            <h4 data-i18n="sec08.hospital">맑은미소 치과의원</h4>
                         </span>
                         <div class="name-area">
                             <span class="name-text">
-                                <h3>김철수</h3>
+                                <h3 data-i18n="sec08.doctorName">김철수</h3>
                             </span>
                             <span class="name-title-text">
-                                <h4>원장</h4>
+                                <h4 data-i18n="sec08.doctorTitle">원장</h4>
                             </span>
                             <span class="position">
-                                <h4>통합치의학과 전문의</h4>
+                                <h4 data-i18n="sec08.doctorPosition">통합치의학과 전문의</h4>
                             </span>
                         </div>
                         <div class="sec08-slogan">
-                            <p>"치료는 빠른 것보다 정확한 것이 중요합니다."</p>
+                            <p data-i18n="sec08.slogan">"치료는 빠른 것보다 정확한 것이 중요합니다."</p>
                         </div>
 
                     </div>
 
                     <div class="profile-details">
                         <div class="detail-group">
-                            <p>약력</p>
+                            <p data-i18n="sec08.careerLabel">약력</p>
                             <ul>
-                                <li>연세대학교 치과대학 졸업 및 치의학 박사</li>
-                                <li>연세대학교 치과대학병원 보철과 전공의 수료</li>
-                                <li>연세대학교 치과대학병원 노인치과·임플란트 클리닉 전임의 역임</li>
-                                <li>연세대학교 치과대학 강사 및 외래교수 역임</li>
+                                <li data-i18n="sec08.career1">연세대학교 치과대학 졸업 및 치의학 박사</li>
+                                <li data-i18n="sec08.career2">연세대학교 치과대학병원 보철과 전공의 수료</li>
+                                <li data-i18n="sec08.career3">연세대학교 치과대학병원 노인치과·임플란트 클리닉 전임의 역임</li>
+                                <li data-i18n="sec08.career4">연세대학교 치과대학 강사 및 외래교수 역임</li>
 
                             </ul>
                         </div>
 
                         <div class="detail-group">
-                            <p>인증·수상</p>
+                            <p data-i18n="sec08.awardLabel">인증·수상</p>
                             <ul>
-                                <li>보건복지부 인증 치과 보철과 전문의</li>
-                                <li>대한치과보철학회 정회원 및 인정의</li>
-                                <li>대한구강악안면임플란트학회 정회원</li>
-                                <li>연세대학교 치과대학병원 우수 전공의 표창</li>
+                                <li data-i18n="sec08.award1">보건복지부 인증 치과 보철과 전문의</li>
+                                <li data-i18n="sec08.award2">대한치과보철학회 정회원 및 인정의</li>
+                                <li data-i18n="sec08.award3">대한구강악안면임플란트학회 정회원</li>
+                                <li data-i18n="sec08.award4">연세대학교 치과대학병원 우수 전공의 표창</li>
                             </ul>
                         </div>
                     </div>
@@ -368,14 +379,14 @@
 
     <section class="sec09">
         <div class="sec09-container">
-            <h1 class="sec09-heading" data-aos="fade-up" data-aos-duration="750">진심을 담은 진료<br>미소의 본질에 집중합니다.</h1>
+            <h1 class="sec09-heading" data-aos="fade-up" data-aos-duration="750" data-i18n="sec09.heading">진심을 담은 진료<br>미소의 본질에 집중합니다.</h1>
 
             <div class="sec09-img" data-aos="fade-up" data-aos-duration="750" data-aos-delay="80">
-                <img src="assets/images/logo-horizental-motify-2.svg" alt="로고 모티프">
+                <img src="assets/images/logo-horizental-motify-2.svg" alt="로고 모티프" data-i18n-attr="alt:sec09.imgAlt">
             </div>
 
             <div class="sec09-body" data-aos="fade-up" data-aos-duration="750" data-aos-delay="120">
-                <p>치과 앞에서의 망설임, 누구보다 잘 알기에.<br>
+                <p data-i18n="sec09.body">치과 앞에서의 망설임, 누구보다 잘 알기에.<br>
                     통증에 대한 두려움과 막연한 불안까지 살피겠습니다.<br>
                     맑은미소는 단순한 치료를 넘어 정직한 진료를 약속합니다.</p>
             </div>
@@ -387,40 +398,40 @@
         <div class="sec10-container">
 
             <div class="sec10-left-text" data-aos="fade-right" data-aos-duration="750">
-                <h2>편안한 상담</h2>
-                <h3>정확한 상담을 위해서<br>상담 문의 주세요.</h3>
+                <h2 data-i18n="sec10.leftHeading">편안한 상담</h2>
+                <h3 data-i18n="sec10.leftSub">정확한 상담을 위해서<br>상담 문의 주세요.</h3>
                 <div class="desc-group">
-                    <p>현재 상태를 면밀히 분석하고</p>
-                    <p>가장 적합한 치료 방향을 제안해드립니다.</p>
-                    <p>치아고민, 편하게 상담해보세요.</p>
+                    <p data-i18n="sec10.desc1">현재 상태를 면밀히 분석하고</p>
+                    <p data-i18n="sec10.desc2">가장 적합한 치료 방향을 제안해드립니다.</p>
+                    <p data-i18n="sec10.desc3">치아고민, 편하게 상담해보세요.</p>
                 </div>
             </div>
 
             <div class="cta-area" data-aos="fade-left" data-aos-duration="750" data-aos-delay="80">
-                <img src="assets/images/logo.svg" alt="맑은미소 치과" class="cta-logo">
+                <img src="assets/images/logo.svg" alt="맑은미소 치과" class="cta-logo" data-i18n-attr="alt:sec10.ctaLogoAlt">
 
                 <div class="cta-card" data-aos="fade-left" data-aos-duration="750" data-aos-delay="100">
-                    <h4>예약 후 방문하시면<br>대기 시간을 줄일 수 있습니다.</h4>
+                    <h4 data-i18n="sec10.cardHeading">예약 후 방문하시면<br>대기 시간을 줄일 수 있습니다.</h4>
 
                     <select class="cta-input full">
-                        <option value="" disabled selected>카테고리</option>
+                        <option value="" disabled selected data-i18n="sec10.categoryPh">카테고리</option>
                     </select>
 
                     <select class="cta-input full">
-                        <option value="" disabled selected>생년월일</option>
+                        <option value="" disabled selected data-i18n="sec10.birthPh">생년월일</option>
                     </select>
 
                     <div class="input-row">
-                        <input type="text" class="cta-input" placeholder="성함">
-                        <input type="tel" class="cta-input" placeholder="연락처">
+                        <input type="text" class="cta-input" placeholder="성함" data-i18n-attr="placeholder:sec10.namePh">
+                        <input type="tel" class="cta-input" placeholder="연락처" data-i18n-attr="placeholder:sec10.phonePh">
                     </div>
 
                     <div class="agree-check">
                         <input type="checkbox" id="agree">
-                        <label for="agree">개인정보 수집 및 <a href="#">개인정보처리방침</a>에 관한 취급을 동의합니다.</label>
+                        <label for="agree" data-i18n="sec10.agreeText">개인정보 수집 및 <a href="#">개인정보처리방침</a>에 관한 취급을 동의합니다.</label>
                     </div>
 
-                    <button type="submit" class="cta-submit-btn">나의 미소 공간 찾기</button>
+                    <button type="submit" class="cta-submit-btn" data-i18n="sec10.submitBtn">나의 미소 공간 찾기</button>
                 </div>
             </div>
 
@@ -436,42 +447,42 @@
 
 
                 <div class="contact-box">
-                    <h3>상담 및 예약</h3>
+                    <h3 data-i18n="sec11.consultHeading">상담 및 예약</h3>
 
                     <div class="contact-item">
-                        <h4>대표번호</h4>
+                        <h4 data-i18n="sec11.phoneLabel">대표번호</h4>
                         <h4>02-1234-5678</h4>
                     </div>
 
                     <div class="contact-item">
-                        <h4>카카오톡</h4>
+                        <h4 data-i18n="sec11.kakaoLabel">카카오톡</h4>
                         <h4>@맑은미소치과</h4>
                     </div>
                 </div>
 
                 <!-- 진료시간 -->
                 <div class="time-box">
-                    <h3>진료시간</h3>
+                    <h3 data-i18n="sec11.hoursHeading">진료시간</h3>
 
-                    <p>월, 수는 야간진료 토요일은 점심시간없이 진료합니다</p>
+                    <p data-i18n="sec11.hoursNote">월, 수는 야간진료 토요일은 점심시간없이 진료합니다</p>
 
                     <div class="time-item">
-                        <h4>화 / 목 / 금</h4>
+                        <h4 data-i18n="sec11.day1">화 / 목 / 금</h4>
                         <h4>10:00 - 19:00</h4>
                     </div>
 
                     <div class="time-item">
-                        <h4>월 / 수</h4>
+                        <h4 data-i18n="sec11.day2">월 / 수</h4>
                         <h4>10:00 - 21:00</h4>
                     </div>
 
                     <div class="time-item">
-                        <h4>토요일</h4>
+                        <h4 data-i18n="sec11.day3">토요일</h4>
                         <h4>09:30 - 14:30</h4>
                     </div>
 
                     <div class="time-item">
-                        <h4>점심시간</h4>
+                        <h4 data-i18n="sec11.day4">점심시간</h4>
                         <h4>13:00 - 14:00</h4>
                     </div>
                 </div>
@@ -479,7 +490,7 @@
             </div>
 
             <div class="map-area" data-aos="fade-up" data-aos-duration="750" data-aos-delay="120">
-                <div id="clinic-map" class="kakao-map" role="region" aria-label="맑은미소 치과의원 위치 지도"></div>
+                <div id="clinic-map" class="kakao-map" role="region" aria-label="맑은미소 치과의원 위치 지도" data-i18n-attr="aria-label:sec11.mapAria"></div>
             </div>
 
         </div>
@@ -496,15 +507,15 @@
 
 
                 <div class="footer-logo">
-                    <img src="assets/images/logo-white.svg" alt="맑은미소 치과의원 로고">
+                    <img src="assets/images/logo-white.svg" alt="맑은미소 치과의원 로고" data-i18n-attr="alt:footer.logoAlt">
                 </div>
 
                 <div class="footer-text">
-                    <p>맑은미소 치과의원</p>
-                    <p>대표 : OOO | 사업자등록번호 : XXX-XX-XXXXX</p>
-                    <p>대표번호 : 1833-2874</p>
-                    <p>주소 : 서울시 OO구 OO로 XX</p>
-                    <p>© 2025 Clear Smile Dental Clinic. All Rights Reserved.</p>
+                    <p data-i18n="footer.brand">맑은미소 치과의원</p>
+                    <p data-i18n="footer.repLine">대표 : OOO | 사업자등록번호 : XXX-XX-XXXXX</p>
+                    <p data-i18n="footer.phoneLine">대표번호 : 1833-2874</p>
+                    <p data-i18n="footer.addressLine">주소 : 서울시 OO구 OO로 XX</p>
+                    <p data-i18n="footer.copyright">© 2025 Clear Smile Dental Clinic. All Rights Reserved.</p>
                 </div>
 
             </div>
@@ -513,15 +524,15 @@
             <div class="footer-sns">
 
                 <a href="#">
-                    <img src="assets/images/icon-youtube.svg" alt="유튜브">
+                    <img src="assets/images/icon-youtube.svg" alt="유튜브" data-i18n-attr="alt:footer.youtubeAlt">
                 </a>
 
                 <a href="#">
-                    <img src="assets/images/icon-facebook.svg" alt="페이스북">
+                    <img src="assets/images/icon-facebook.svg" alt="페이스북" data-i18n-attr="alt:footer.facebookAlt">
                 </a>
 
                 <a href="#">
-                    <img src="assets/images/icon-instagram.svg" alt="인스타그램">
+                    <img src="assets/images/icon-instagram.svg" alt="인스타그램" data-i18n-attr="alt:footer.instagramAlt">
                 </a>
 
             </div>
@@ -530,8 +541,8 @@
 
     </footer>
 
-    <a class="floating-btn" href="#" aria-label="카카오톡 상담 바로가기">
-        <img src="assets/images/kakao.png" alt="카카오톡 상담">
+    <a class="floating-btn" href="#" aria-label="카카오톡 상담 바로가기" data-i18n-attr="aria-label:floating.ariaLabel">
+        <img src="assets/images/kakao.png" alt="카카오톡 상담" data-i18n-attr="alt:floating.imgAlt">
     </a>
 
 
@@ -540,6 +551,8 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="assets/js/kakao-map.config.js"></script>
     <script src="assets/js/kakao-map.js"></script>
+    <script src="assets/js/i18n-data.js"></script>
+    <script src="assets/js/i18n.js"></script>
     <script src="assets/js/card.js"></script>
 
 </body>
